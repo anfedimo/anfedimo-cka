@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: example-config
+data:
+  APP_ENV: production
+  APP_DEBUG: "false"
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: configmap-pod
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    envFrom:
+    - configMapRef:
+        name: example-config
+    command: [ "sh", "-c", "echo APP_ENV is $APP_ENV && echo APP_DEBUG is $APP_DEBUG && sleep 3600" ]

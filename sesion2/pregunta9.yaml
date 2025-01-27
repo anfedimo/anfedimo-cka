@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  backend
+spec:
+  selector:
+    matchLabels:
+      app: python
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app:  python
+    spec:
+      containers:
+      - name:  python
+        image:  pyth0n:3.11
+        ports:
+        - containerPort:  81

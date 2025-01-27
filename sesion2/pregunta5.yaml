@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: node
+spec:
+  containers:
+  - name: node
+    image: n0de:18.17-slim

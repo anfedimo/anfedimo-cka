@@ -1,0 +1,72 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend-pod-1
+  labels:
+    app: frontend
+spec:
+  containers:
+  - name: frontend-container
+    image: nginx
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend-pod-2
+  labels:
+    app: frontend
+spec:
+  containers:
+  - name: frontend-container
+    image: nginx
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend-pod-3
+  labels:
+    app: frontend
+spec:
+  containers:
+  - name: frontend-container
+    image: nginx
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: backend-pod-1
+  labels:
+    app: backend
+spec:
+  containers:
+  - name: backend-container
+    image: nginx
+  restartPolicy: Always
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: backend-pod-2
+  labels:
+    app: backend
+spec:
+  containers:
+  - name: backend-container
+    image: nginx
+  restartPolicy: Always
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: db-pod
+  labels:
+    app: bd
+spec:
+  containers:
+  - name: db-container
+    image: redis

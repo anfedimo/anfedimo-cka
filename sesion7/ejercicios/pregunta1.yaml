@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  volume-pregunta1
+spec:
+  selector:
+    matchLabels:
+      app: volume-pregunta1
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app:  volume-pregunta1
+    spec:
+      containers:
+      - name: volume-pregunta1
+        image: busybox
+        command: ["/bin/sh", "-c", "echo pregunta1 > /cka/course.txt && sleep 100s"]
+        volumeMounts:
+        - name: data
+          mountPath: /cka
+      volumes:
+      - name: data
+        hostPath:
+          path: /cka
+          type: DirectoryOrCreate
+      restartPolicy: Never

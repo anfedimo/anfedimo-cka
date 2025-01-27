@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pregunta6-config
+data:
+  HOST: jsonplaceholder.typicode.com
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pregunta6-pod
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    envFrom:
+    - configMapRef:
+        name: pregunta6-config
+    command: [ "sh", "-c", "echo HOST is $HOST && sleep 3600" ]

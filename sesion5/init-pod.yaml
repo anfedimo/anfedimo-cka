@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: init-pod
+  labels:
+    app: init-pod
+spec:
+  initContainers:
+  - name: init
+    image: alpine
+    command: ['/bin/sh', '-c', 'mkdir -p /cka/logs']
+    volumeMounts:
+      - name: data
+        mountPath: /cka
+  containers:
+  - name: server
+    image: nginx
+    ports:
+    - containerPort:  80
+      name:  http
+    volumeMounts:
+    - name: data
+      mountPath: /cka
+  volumes:
+    - name: data
+      emptyDir: {}

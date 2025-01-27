@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: toleration-pod
+  labels:
+    env: prod
+spec:
+  containers:
+  - name: toleration-pod
+    image: nginx

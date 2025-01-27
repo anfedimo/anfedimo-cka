@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hostpath-pod
+spec:
+  nodeName: worker
+  containers:
+  - name: hostpath-pod
+    image: busybox
+    command: ["/bin/sh", "-c", "echo ckad > /opts/course.txt && sleep 100s"]
+    volumeMounts:
+    - name: data
+      mountPath: /opts
+  restartPolicy: Never
+  volumes:
+    - name: data
+      hostPath:
+        path: /data
+        type: DirectoryOrCreate

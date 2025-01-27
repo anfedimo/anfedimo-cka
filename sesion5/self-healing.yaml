@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  api-poc-fail
+  labels:
+    app:  api-poc-fail
+spec:
+  selector:
+    matchLabels:
+      app: api-poc-fail
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app:  api-poc-fail
+    spec:
+      containers:
+      - name: server
+        image: nginx
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        livenessProbe:
+          exec:
+            command:
+            - /bin/sh
+            - -c
+            - eco "cka"
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          failureThreshold: 1
+        readinessProbe:
+          exec:
+            command:
+            - /bin/sh
+            - -c
+            - echo "cka"
+          initialDelaySeconds: 15
+          periodSeconds: 10
