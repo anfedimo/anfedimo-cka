@@ -1,4 +1,4 @@
-![Kubernetes Logo](image.png)
+![KUBERNETES](https://kvadrat.az/uploads/articles/66f915066f5dc.png)
 
 # Kubernetes Setup and Maintenance Documentation
 
