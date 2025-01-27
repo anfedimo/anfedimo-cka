@@ -1,3 +1,5 @@
+![Kubernetes Logo](image.png)
+
 # Kubernetes Setup and Maintenance Documentation
 
 Este documento detalla los pasos para la **instalación**, **actualización de IP del Control Plane** y **upgrade de Kubernetes** en un entorno de 2 máquinas virtuales (Control Plane y Worker Node) ejecutando Ubuntu 20.04.
