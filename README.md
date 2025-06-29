@@ -190,3 +190,13 @@ Este documento detalla los pasos para la **instalación**, **actualización de I
 ### Flujo de instalación
 
 ![Flujo de instalación](https://d33wubrfki0l68.cloudfront.net/3451b95b6cb8ea04d5b2ca432c3061d8ab8d22cc/2a1fd/images/docs/kubeadm/kubeadm.png)
+
+
+## 👨‍💻 Autor
+
+Fernando Díaz Moreno
+
+[![GitHub: anfedimo](https://img.shields.io/badge/GitHub-@anfedimo-181717?logo=github)](https://github.com/anfedimo)
+[![LinkedIn: Fernando Díaz Moreno](https://img.shields.io/badge/LinkedIn-Fernando_Díaz_Moreno-blue?logo=linkedin)](http://linkedin.com/in/fernando-diaz-moreno-751b08ba)
+
+---
