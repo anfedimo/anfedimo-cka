@@ -189,7 +189,7 @@ Este documento detalla los pasos para la **instalación**, **actualización de I
 ![Kubernetes Workflow](image/Kubernetes_Workflow.png)
 ### Flujo de instalación
 
-![Flujo de instalación](https://d33wubrfki0l68.cloudfront.net/3451b95b6cb8ea04d5b2ca432c3061d8ab8d22cc/2a1fd/images/docs/kubeadm/kubeadm.png)
+![Flujo de instalación]([https://d33wubrfki0l68.cloudfront.net/3451b95b6cb8ea04d5b2ca432c3061d8ab8d22cc/2a1fd/images/docs/kubeadm/kubeadm.png](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*aIPpZ4k4_xifzw78aok8gQ.png))
 
 
 ## 👨‍💻 Autor
