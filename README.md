@@ -179,6 +179,16 @@ Este documento detalla los pasos para la **instalación**, **actualización de I
    sudo systemctl restart kubelet
    ```
 
+Casos de Error
+
+1. **Reiniciar Kubelet**:
+   ```bash
+   sudo swapoff -a
+   free -h | grep Swap   # Used debe ser 0
+   sudo systemctl daemon-reload
+   sudo systemctl restart kubelet # Reiniciar el kubelet
+   sudo systemctl status --no-pager kubelet # Verifica que ya está active (running):
+   ```
 ---
 
 ## Imágenes
